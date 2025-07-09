@@ -100,7 +100,7 @@ export default function App() {
           current={lettersUsed.length} 
           max={challenge.word.length + ATTEMPTS_MARGIN} 
           onRestart={handleRestartGame} 
-         />
+        />
 
         <Tip tip={challenge.tip} />
 
@@ -108,7 +108,6 @@ export default function App() {
           {
             challenge.word.split("").map((letter, index) => {
               const letterUsed = lettersUsed.find((used) => used.value.toUpperCase() === letter.toUpperCase())
-             
 
               return <Letter key={index} value={letterUsed?.value} color={letterUsed?.correct ? "correct" : "default"} />
             })
